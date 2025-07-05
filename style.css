@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 72px;
+}
+
+/* LHS */
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.box {
+  border: 1.5px solid black;
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.box:disabled {
+  color: rgb(175, 235, 175);
+}
+
+.hover:hover {
+  background-color: rgba(175, 235, 175, 0.5);
+}
+
+/* RHS */
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.info {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.reset {
+  padding: 10px 20px;
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: rgb(175, 235, 175);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.reset:hover {
+  background-color: rgba(175, 235, 175, 0.7);
+}
+
+.hiddenBtn {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* False Borders */
+.bt {
+  border-top: 0;
+}
+.br {
+  border-right: 0;
+}
+.bb {
+  border-bottom: 0;
+}
+.bl {
+  border-left: 0;
+}
+
+/*Mobile*/
+@media (width < 754px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .gameContainer {
+    order: 2;
+  }
+
+  .container {
+    padding: 35vw 2vw;
+  }
+}
+@media (height < 780px) and (width < 754px) {
+  .container {
+    padding: 20vw 2vw;
+  }
+}
